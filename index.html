@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday HAMZA ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div id="stars"></div>
+    <div id="hearts"></div>
+    <div id="balloons"></div>
+
+    <!-- Music -->
+    <audio id="music" autoplay loop>
+        <source src="music.mp3.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="glass">
+
+            <h3>🎉 Happy Birthday 🎉</h3>
+
+            <h1>HAMZA ❤️</h1>
+
+            <p id="typing"></p>
+
+            <img src="assets/doll.png" class="doll">
+
+            <button id="surpriseBtn">
+                🎁 Open Surprise
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Cake -->
+    <section class="cakeSection">
+
+        <h2>🎂 Make A Wish 🎂</h2>
+
+        <div class="cake">
+
+            <div class="candle"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Letter -->
+    <section class="letter">
+
+        <div class="letterCard">
+
+            <h2>💌 Dear HAMZA</h2>
+
+            <p>
+
+                Happy Birthday to the most wonderful best friend.
+
+                Thank you for every smile,
+                every memory,
+                every laugh.
+
+                I pray your life is filled with
+                happiness,
+                success,
+                love
+                and beautiful moments.
+
+                Never stop smiling.
+
+                Stay Blessed ❤️
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+
+        <h2>📸 Memories</h2>
+
+        <div class="images">
+
+            <img src="images/photo1.jpg">
+
+            <img src="images/photo2.jpg">
+
+            <img src="images/photo3.jpg">
+
+            <img src="images/photo4.jpg">
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        Made With ❤️ For HAMZA
+
+    </footer>
+
+    <!-- ==========================
+     LOCK SCREEN
+=========================== -->
+
+<div id="lockScreen">
+
+    <div class="lockBox">
+
+        <h1>🔒</h1>
+
+        <h2>Birthday Surprise</h2>
+
+        <p>Enter 4 Digit PIN</p>
+
+        <input
+            type="password"
+            id="pin"
+            maxlength="4"
+            placeholder="****">
+
+        <br><br>
+
+        <button onclick="unlock()">
+            Unlock ❤️
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,946 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#080014;
+    overflow-x:hidden;
+    color:white;
+
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    radial-gradient(circle at top,#ff4fa3 0%,transparent 30%),
+
+    radial-gradient(circle at bottom,#6d00ff 0%,transparent 35%),
+
+    #080014;
+
+    z-index:-3;
+
+}
+
+/* ===========================
+STARS
+=========================== */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background-image:
+
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    animation:starsMove 60s linear infinite;
+
+    opacity:.35;
+
+    z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-500px);
+
+    }
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.glass{
+
+    width:90%;
+
+    max-width:800px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+
+    0 0 50px rgba(255,0,150,.25);
+
+}
+
+/* ===========================
+TITLE
+=========================== */
+
+.hero h3{
+
+    color:#ffd166;
+
+    font-size:28px;
+
+    letter-spacing:3px;
+
+    animation:fadeDown 1.2s;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    color:#ff4fa3;
+
+    text-shadow:
+
+    0 0 15px #ff4fa3,
+
+    0 0 30px #ff4fa3,
+
+    0 0 60px #ff4fa3;
+
+    margin:20px 0;
+
+}
+
+#typing{
+
+    font-size:22px;
+
+    line-height:35px;
+
+    color:#ffffff;
+
+    min-height:70px;
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+#surpriseBtn{
+
+    margin-top:35px;
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff2d96,#ff7d00);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px #ff2d96;
+
+}
+
+#surpriseBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 45px #ff2d96;
+
+}
+
+/* ===========================
+DOLL
+=========================== */
+
+.doll{
+
+    width:260px;
+
+    margin:35px auto;
+
+    display:block;
+
+    animation:floatDoll 3s ease-in-out infinite;
+
+}
+
+@keyframes floatDoll{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+#hearts{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+    bottom:-80px;
+    width:25px;
+    height:25px;
+    background:#ff3c93;
+    transform:rotate(45deg);
+    animation:heartFloat linear infinite;
+
+}
+
+.heart::before,
+.heart::after{
+
+    content:"";
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:#ff3c93;
+    border-radius:50%;
+
+}
+
+.heart::before{
+
+    top:-12px;
+    left:0;
+
+}
+
+.heart::after{
+
+    left:-12px;
+    top:0;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(45deg);
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(405deg);
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   BALLOONS
+=========================== */
+
+#balloons{
+
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+
+}
+
+.balloon{
+
+    position:absolute;
+    bottom:-180px;
+    width:80px;
+    height:100px;
+    border-radius:50%;
+    animation:balloonMove linear infinite;
+
+}
+
+.balloon::after{
+
+    content:"";
+    position:absolute;
+    width:2px;
+    height:120px;
+    background:white;
+    left:50%;
+    top:100%;
+
+}
+
+.red{background:#ff3b6f;}
+.blue{background:#4da6ff;}
+.yellow{background:#ffd93d;}
+.green{background:#58d68d;}
+.purple{background:#b266ff;}
+
+@keyframes balloonMove{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    100%{
+
+        transform:translateY(-130vh);
+
+    }
+
+}
+
+/* ===========================
+   LETTER CARD
+=========================== */
+
+.letter{
+
+    padding:100px 20px;
+
+}
+
+.letterCard{
+
+    max-width:850px;
+    margin:auto;
+    padding:45px;
+    border-radius:30px;
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    text-align:center;
+
+}
+
+.letterCard h2{
+
+    color:#ff6eb4;
+    margin-bottom:25px;
+    font-size:40px;
+
+}
+
+.letterCard p{
+
+    font-size:20px;
+    line-height:38px;
+
+}
+
+/* ===========================
+   CAKE
+=========================== */
+
+.cakeSection{
+
+    padding:100px 20px;
+    text-align:center;
+
+}
+
+.cake{
+
+    width:220px;
+    height:180px;
+    background:#ffb3c7;
+    margin:60px auto;
+    border-radius:20px;
+    position:relative;
+    box-shadow:0 0 40px rgba(255,105,180,.6);
+
+}
+
+.candle{
+
+    width:12px;
+    height:70px;
+    background:white;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:-60px;
+
+}
+
+.candle::before{
+
+    content:"🔥";
+    position:absolute;
+    top:-35px;
+    left:-8px;
+    font-size:28px;
+    animation:flicker .8s infinite;
+
+}
+
+@keyframes flicker{
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    padding:100px 20px;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#ffd166;
+    margin-bottom:40px;
+
+}
+
+.images{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+
+}
+
+.images img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.5s;
+    box-shadow:0 0 30px rgba(255,105,180,.35);
+
+}
+
+.images img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    padding:35px;
+    text-align:center;
+    font-size:20px;
+    color:#ccc;
+
+}/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkle{
+
+    position:fixed;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    box-shadow:
+    0 0 10px white,
+    0 0 20px #ff4fa3;
+    animation:sparkle 2s linear infinite;
+    pointer-events:none;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+        transform:scale(.2);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+        transform:scale(.2);
+
+    }
+
+}
+
+/* ===========================
+   SHOOTING STAR
+=========================== */
+
+.shooting{
+
+    position:fixed;
+    width:150px;
+    height:2px;
+
+    background:linear-gradient(to right,
+    white,
+    transparent);
+
+    animation:shoot 5s linear infinite;
+
+}
+
+@keyframes shoot{
+
+    0%{
+
+        transform:
+        translate(-200px,-200px)
+        rotate(35deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translate(1600px,900px)
+        rotate(35deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   FIREWORKS
+=========================== */
+
+.firework{
+
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#ffd700;
+    box-shadow:
+    0 0 20px #ffd700,
+    0 0 40px #ff2d96;
+
+    animation:explode 1.4s ease-out forwards;
+
+}
+
+@keyframes explode{
+
+    0%{
+
+        transform:scale(.1);
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(20);
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   GLOW EFFECT
+=========================== */
+
+.glass:hover{
+
+    box-shadow:
+    0 0 70px #ff2d96;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff4fa3;
+    border-radius:20px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.hero h3{
+
+font-size:24px;
+
+}
+
+.doll{
+
+width:220px;
+
+}
+
+.letterCard{
+
+padding:35px;
+
+}
+
+.images{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
+}
+
+#typing{
+
+font-size:18px;
+
+line-height:30px;
+
+}
+
+.doll{
+
+width:170px;
+
+}
+
+#surpriseBtn{
+
+width:100%;
+
+font-size:18px;
+
+}
+
+.letterCard h2{
+
+font-size:30px;
+
+}
+
+.letterCard p{
+
+font-size:17px;
+
+line-height:32px;
+
+}
+
+.images{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery h2{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero h3{
+
+font-size:18px;
+
+}
+
+.doll{
+
+width:150px;
+
+}
+
+.cake{
+
+width:170px;
+
+height:140px;
+
+}
+
+footer{
+
+font-size:16px;
+
+}
+
+}/*=========================
+LOCK SCREEN
+==========================*/
+
+#lockScreen{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(135deg,#090018,#24002f);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999999;
+
+}
+
+.lockBox{
+
+width:90%;
+max-width:360px;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 0 30px #ff2d96;
+
+}
+
+.lockBox h2{
+
+margin:10px 0;
+
+color:#ff69b4;
+
+}
+
+.lockBox p{
+
+color:white;
+
+}
+
+.lockBox input{
+
+width:100%;
+
+padding:16px;
+
+margin-top:20px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:22px;
+
+text-align:center;
+
+letter-spacing:8px;
+
+outline:none;
+
+}
+
+.lockBox button{
+
+margin-top:20px;
+
+padding:14px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff2d96;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.lockBox button:hover{
+
+transform:scale(1.05);
+
+}
+
+#error{
+
+margin-top:15px;
+
+color:#ff4444;
+
+font-weight:bold;
+
+}
